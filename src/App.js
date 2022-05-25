@@ -1,10 +1,10 @@
-import Header from './componenst/Header';
-import Initial from './componenst/Initial';
-import About from './componenst/About';
-import Answer from './componenst/Answer';
-import NftCalc from './componenst/NftCalc';
-import NftWrapper from './componenst/NftWrapper';
-import Footer from './componenst/Footer';
+import Header from './components/Header';
+import Initial from './components/Initial';
+import About from './components/About';
+import Answer from './components/Answer';
+import NftCalc from './components/NftCalc';
+import NftWrapper from './components/NftWrapper';
+import Footer from './components/Footer';
 import './sass/main.sass';
 
 function App() {
