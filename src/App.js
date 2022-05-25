@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './componenst/Header';
+import Initial from './componenst/Initial';
+import About from './componenst/About';
+import Answer from './componenst/Answer';
+import NftCalc from './componenst/NftCalc';
+import NftWrapper from './componenst/NftWrapper';
+import Footer from './componenst/Footer';
+import './sass/main.sass';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<Header />
+			<main className="main">
+				<Initial />
+				<About />
+				<Answer />
+				<section id="calc" className="nft-search container">
+					<h2 className="title">NFT Search</h2>
+					<NftCalc />
+					<NftWrapper />
+				</section>
+				<Footer />
+			</main>
+		</>
+	);
 }
 
 export default App;

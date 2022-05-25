@@ -1,0 +1,129 @@
+@use "sass:meta"
+
+$font-family: 'Inter', sans-serif
+$main-bg-color: #000
+$main-text-color: #fff
+$main-text-color-hover: #000
+$btn-bg-color: #2449FF
+$btn-bg-color-hover: #fff
+$transition-fast: .3s
+$transition-normal: .6s
+$transition-slow: .9s
+
+:root
+	--font-family: #{meta.inspect($font-family)}
+	--main-bg-color: #{$main-bg-color}
+	--main-text-color: #{$main-text-color}
+	--main-text-color-hover: #{$main-text-color-hover}
+	--btn-bg-color: #{$btn-bg-color}
+	--btn-bg-color-hover: #{$btn-bg-color-hover}
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+html
+	scroll-behavior: smooth
+
+body
+	font-family: $font-family
+	background-color: $main-bg-color
+	color: $main-text-color
+
+a
+	font-family: $font-family
+	color: $main-text-color
+	text-decoration: none
+	white-space: nowrap
+	transition: .3s
+	&:hover
+		text-decoration: underline
+
+input
+	font-family: $font-family
+
+input[type="number"]
+	-moz-appearance: textfield
+	-webkit-appearance: textfield
+	appearance: textfield
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+	display: none
+
+
+ul
+	list-style: none
+
+button, .btn
+	display: inline-block
+	font-family: $font-family
+	color: $main-text-color
+	font-size: 20px
+	background-color: $btn-bg-color
+	border: 2px solid $btn-bg-color
+	border-radius: 10px
+	padding: 18px 68px
+	white-space: nowrap
+	cursor: pointer
+	transition: .3s
+	@media (max-width: 530px)
+		font-size: 15px
+		padding: 12px 40px
+	&:hover
+		background-color: $btn-bg-color-hover
+		color: $main-text-color-hover
+		border: 2px solid $main-text-color-hover
+		text-decoration: none
+
+.btn-calc
+	@media (max-width: 530px)
+		padding: 16px 55px
+	@media (max-width: 370px)
+		padding: 13px 47px
+		margin: 0 auto
+		display: block
+
+
+.container
+	margin: 0 auto
+	max-width: 1200px
+	padding-left: 10px
+	padding-right: 10px
+	@media (max-width: 765px)
+		max-width: 574px
+
+.container-s
+	margin: 0 auto
+	max-width: 992px
+	padding-left: 10px
+	padding-right: 10px
+	@media (max-width: 765px)
+		max-width: 574px
+
+.title
+	font-weight: 500
+	font-size: 60px
+	line-height: 146.02%
+	margin-bottom: 50px
+	text-align: center
+	@media (max-width: 765px)
+		font-size: 50px
+	@media (max-width: 530px)
+		font-size: 42px
+	@media (max-width: 375px)
+		font-size: 32px
+
+@import "./header"
+@import "./initial"
+@import "./about"
+@import "./answer"
+@import "./nft-search"
+@import "./nft-wrapper"
+@import "./footer"
+
+.none
+	display: none

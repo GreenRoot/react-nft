@@ -1,0 +1,43 @@
+.header
+	width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-top: 40px
+	margin-bottom: 120px
+	@media (max-width: 1120px)
+		margin-bottom: 75px
+
+.links
+	display: flex
+	@media (max-width: 600px)
+		display: grid
+		grid-auto-flow: column
+		grid-template-columns: min-content min-content
+		grid-template-rows: min-content min-content
+		grid-template-areas: 'Home About' 'NFT Service'
+		gap: 15px 30px
+		justify-content: space-between
+		width: 100%
+		padding-right: 50px
+		padding-left: 50px
+
+.link
+	margin-right: 70px
+	@media (max-width: 600px)
+		margin-right: 0
+		&:nth-child(1)
+			grid-area: Home
+		&:nth-child(2)
+			grid-area: About
+		&:nth-child(3)
+			grid-area: Service
+		&:nth-child(4)
+			grid-area: NFT
+	&:last-child
+		margin-right: 0
+
+.link__item
+	font-weight: 500
+	font-size: 13px
+

@@ -1,0 +1,70 @@
+.about
+	cursor: default
+
+.features
+	display: grid
+	grid-template-columns: min-content 1fr min-content
+	grid-template-rows: min-content min-content
+	grid-template-areas: 'Control . Millions' 'Free . Millions'
+	gap: 110px 0
+	margin-bottom: 125px
+	background-image: url(../img/feature.webp)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: 296px 390px
+	@media (max-width: 765px)
+		grid-template-columns: min-content 1fr
+		grid-template-rows: min-content min-content min-content
+		grid-template-areas: 'Free .' 'Control .' 'Millions .'
+		background-position: 100% 50%
+		gap: 48px 0
+	@media (max-width: 530px)
+		grid-template-columns: min-content
+		grid-template-rows: min-content min-content min-content
+		grid-template-areas: 'Control' 'Millions' 'Free'
+		justify-content: center
+		text-align: center
+		background-position: 50% 100%
+		gap: 48px 0
+		padding-bottom: 450px
+	&__item
+		width: 255px
+		&:nth-child(1)
+			grid-area: Control
+		&:nth-child(2)
+			grid-area: Millions
+		&:nth-child(3)
+			grid-area: Free
+		&-alter
+			display: flex
+			flex-direction: column
+			justify-content: center
+	&__title
+		font-weight: 400
+		font-size: 40px
+		line-height: 118.52%
+		margin-bottom: 25px
+		@media (max-width: 375px)
+			font-size: 23px
+		&-alter
+			text-align: right
+			@media (max-width: 765px)
+				text-align: left
+			@media (max-width: 530px)
+				text-align: center
+	&__text
+		font-weight: 400
+		font-size: 18px
+		line-height: 143.52%
+		color: #A6A6A6
+		transition: $transition-fast
+		&:hover
+			color: #fff
+		@media (max-width: 375px)
+			font-size: 14px
+		&-alter
+			text-align: right
+			@media (max-width: 765px)
+				text-align: left
+			@media (max-width: 530px)
+				text-align: center
