@@ -12,7 +12,6 @@ function NftCalc() {
 			risk: 'LowRisk',
 		},
 	});
-	console.log(errors);
 
 	return (
 		<div className="nft-calc">

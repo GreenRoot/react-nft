@@ -8,7 +8,7 @@ function Initial() {
 				<a href="#calc" className="initial__img">
 					<div className="initial__img-aura"></div>
 					<picture>
-						<source media="(max-width: 425px)" srcset={initialImg425} />
+						<source media="(max-width: 425px)" srcSet={initialImg425} />
 						<img src={initialImg} alt="Build a profitable NFT" />
 					</picture>
 				</a>
