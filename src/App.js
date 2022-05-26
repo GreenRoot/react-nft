@@ -1,21 +1,21 @@
-import Header from './components/Header';
-import Initial from './components/Initial';
-import About from './components/About';
-import Answer from './components/Answer';
-import Footer from './components/Footer';
-import NftSearch from './components/NftSearch';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import AboutTheProject from './pages/AboutTheProject';
+import Home from './pages/Home';
+import Search from './pages/Search';
+import NotFound from './pages/NotFound';
+import ServiceEfficiency from './pages/ServiceEfficiency';
 import './sass/main.sass';
 
 function App() {
 	return (
-		<>
-			<Header />
-			<Initial />
-			<About />
-			<Answer />
-			<NftSearch />
-			<Footer />
-		</>
+		<Routes>
+			<Route path="/" element={<Home />} />
+			<Route path="/about" element={<AboutTheProject />} />
+			<Route path="/service-efficiency" element={<ServiceEfficiency />} />
+			<Route path="/search" element={<Search />} />
+			<Route path="/*" element={<NotFound />} />
+		</Routes>
 	);
 }
 
