@@ -1,6 +1,6 @@
 import Calc from './Calc';
 
-function NftCalc() {
+function NftCalcWapper() {
 	return (
 		<>
 			<div className="nft-calc">
@@ -29,4 +29,4 @@ function NftCalc() {
 	);
 }
 
-export default NftCalc;
+export default NftCalcWapper;
