@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-function Calc() {
+function Calc({ showCards, setShowCards }) {
 	const {
 		register,
 		handleSubmit,
@@ -13,14 +13,15 @@ function Calc() {
 		},
 	});
 
+	function pushData() {
+		return handleSubmit((data) => {
+			console.log(`Data ready sum: ${data.sum * 1}risk: ${data.risk}`);
+			setShowCards(true);
+		});
+	}
+
 	return (
-		<form
-			onSubmit={handleSubmit((data) => {
-				alert(`Data ready 
-sum: ${data.sum * 1}
-risk: ${data.risk}`);
-			})}
-			className="calc">
+		<form onSubmit={pushData()} className="calc">
 			<h2 className="calc__title">Assemble NFT&nbsp;portfolio</h2>
 			<label className="calc__label">
 				<div className="calc__text">How much money are you willing to invest?</div>

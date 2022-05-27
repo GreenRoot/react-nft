@@ -10,6 +10,10 @@ $transition-fast: .3s
 $transition-normal: .6s
 $transition-slow: .9s
 
+::-webkit-scrollbar
+	width: 0
+	height: 0
+
 :root
 	--font-family: #{meta.inspect($font-family)}
 	--main-bg-color: #{$main-bg-color}
@@ -124,6 +128,9 @@ button, .btn
 @import "./nft-search"
 @import "./nft-wrapper"
 @import "./footer"
+
+.mt50
+	margin-top: 50px
 
 .none
 	display: none

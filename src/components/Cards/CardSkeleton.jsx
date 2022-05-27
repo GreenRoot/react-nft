@@ -3,6 +3,7 @@ import ContentLoader from 'react-content-loader';
 
 const CardSkeleton = (props) => (
 	<ContentLoader
+		className="cards"
 		speed={2}
 		width={264}
 		height={324.2}

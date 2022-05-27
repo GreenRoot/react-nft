@@ -1,12 +1,12 @@
 import NftCalcPrewiew from './NftCalcPrewiew';
 import Calc from './Calc';
 
-function NftCalcWapper() {
+function NftCalcWapper({ showCards, setShowCards }) {
 	return (
 		<>
 			<div className="nft-calc">
 				<NftCalcPrewiew />
-				<Calc />
+				<Calc showCards={showCards} setShowCards={setShowCards} />
 			</div>
 		</>
 	);
