@@ -4,7 +4,7 @@ import NftCalcWapper from './NftCalcWapper';
 import NftCardsWrapper from './NftCardsWrapper';
 
 function Calc() {
-	const [showCards, setShowCards] = React.useState(true);
+	const [showCards, setShowCards] = React.useState(false);
 
 	return (
 		<section id="calc" className="nft-search container">
