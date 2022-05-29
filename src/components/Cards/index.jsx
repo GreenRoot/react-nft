@@ -16,16 +16,28 @@ function Card({
 			.replace(/\d(?=(\d{3})+\.)/g, '$&,');
 	}
 
+	// conditional risk dot styles
+	let riskStyle;
+	if (risk === 'Low risk') {
+		riskStyle = styles.riskStatus;
+	} else if (risk === 'Moderate risk') {
+		riskStyle = styles.riskYellow;
+	} else if (risk === 'High risk') {
+		riskStyle = styles.riskOrange;
+	} else {
+		riskStyle = styles.riskRed;
+	}
+
 	return (
 		<a key={id} target="_blank" href={link} className={styles.card}>
 			<div className={styles.img}>
-				<img src={img + '=w500'} alt={name} />
+				<img src={img} alt={name} />
 			</div>
 			<div className={styles.status}>
 				<div title={`$ ${toPrice(price)}`} className={styles.price}>{`$ ${toPrice(price)}`}</div>
 				<div className={styles.risk}>
 					<div>{risk}</div>
-					<div className={styles.riskStatus}></div>
+					<div className={`${styles.riskStatus} ${riskStyle}`}></div>
 				</div>
 			</div>
 			<div title={name} className={styles.name}>

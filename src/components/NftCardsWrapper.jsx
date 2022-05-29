@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Cards';
 import CardSkeleton from './Cards/CardSkeleton';
 
-function NftCardsWrapper({ showCards, setShowCards }) {
+function NftCardsWrapper({ showCards, setShowCards, sum, setSum, risk, setRisk }) {
 	const [items, setItems] = React.useState([]);
 	const [isLoading, setIsLoading] = React.useState(true);
 	const [currentPage, setCurrentPage] = React.useState(1);
@@ -16,7 +16,7 @@ function NftCardsWrapper({ showCards, setShowCards }) {
 
 	React.useEffect(() => {
 		// Requesting data from mockapi.io
-		fetch(`https://628f9bfc0e69410599df9bd1.mockapi.io/items?page=${currentPage}&limit=8`)
+		fetch(`https://628f9bfc0e69410599df9bd1.mockapi.io/${risk}?page=${currentPage}&limit=8`)
 			.then((res) => res.json())
 			.then((arr) => {
 				setItems(items.concat(arr));
