@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-function Calc({ showCards, setShowCards }) {
+function Calc({ showCards, setShowCards, sum, setSum, risk, setRisk }) {
 	const {
 		register,
 		handleSubmit,
@@ -9,12 +9,14 @@ function Calc({ showCards, setShowCards }) {
 	} = useForm({
 		defaultValues: {
 			sum: 1000,
-			risk: 'LowRisk',
+			risk: 'low-risk',
 		},
 	});
 
 	function pushData() {
 		return handleSubmit((data) => {
+			setSum(data.sum * 1);
+			setRisk(data.risk);
 			console.log(`Data ready sum: ${data.sum * 1}risk: ${data.risk}`);
 			setShowCards(true);
 		});
@@ -47,7 +49,7 @@ function Calc({ showCards, setShowCards }) {
 							{...register('risk', { required: 'This is required!' })}
 							className="radio__input"
 							type="radio"
-							value="LowRisk"
+							value="low-risk"
 						/>
 						<span className="radio__imput-radio"></span>
 						<span className="radio__label">Low Risk</span>
@@ -57,7 +59,7 @@ function Calc({ showCards, setShowCards }) {
 							{...register('risk', { required: 'This is required!' })}
 							className="radio__input"
 							type="radio"
-							value="Moderate"
+							value="moderate-risk"
 						/>
 						<span className="radio__imput-radio"></span>
 						<span className="radio__label">Moderate</span>
@@ -67,7 +69,7 @@ function Calc({ showCards, setShowCards }) {
 							{...register('risk', { required: 'This is required!' })}
 							className="radio__input"
 							type="radio"
-							value="High"
+							value="high-risk"
 						/>
 						<span className="radio__imput-radio"></span>
 						<span className="radio__label">High</span>
@@ -77,7 +79,7 @@ function Calc({ showCards, setShowCards }) {
 							{...register('risk', { required: 'This is required!' })}
 							className="radio__input"
 							type="radio"
-							value="VeryHigh"
+							value="very-high-risk"
 						/>
 						<span className="radio__imput-radio"></span>
 						<span className="radio__label">Very high</span>

@@ -1,0 +1,55 @@
+.card
+	display: grid
+	&:hover
+		text-decoration: none
+.img
+	width: 264px
+	height: 250px
+	border-radius: 10px
+	overflow: hidden
+	background-color: #333
+	& img
+		width: 100%
+		height: 100%
+		object-fit: cover
+.status
+	display: flex
+	justify-content: space-between
+	margin-top: 7px
+.price
+	font-weight: 500
+	font-size: 29px
+	line-height: 41.47px
+	min-height: 41.47px
+	overflow: hidden
+	text-overflow: ellipsis
+	max-width: 200px
+.risk
+	position: relative
+	top: 5px
+	font-size: 12px
+	max-width: 55px
+	white-space: normal
+	text-align: right
+.riskStatus
+	position: absolute
+	top: 3px
+	left: -15px
+	width: 10px
+	height: 10px
+	border-radius: 50%
+	background-color: #1fc53a
+.riskYellow
+	background-color: #b4c51f
+.riskOrange
+	background-color: #c56a1f
+.riskRed
+	background-color: #c52a1f
+.name
+	font-weight: 400
+	font-size: 18px
+	line-height: 25.7px
+	min-height: 25.7px
+	color: #A6A6A6
+	overflow: hidden
+	text-overflow: ellipsis
